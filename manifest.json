@@ -8,5 +8,5 @@
  "url": "https://raw.githubusercontent.com/evanthomas/fb-test/master/manifest.json",
  "zip": "https://github.com/evanthomas/fb-test/archive/master.zip",
  "executable": "python",
- "args": ["fb-test-master/bot-echo.py"]
+ "args": ["fb-test-master/botecho.py"]
 }
