@@ -33,13 +33,11 @@ class Move(Resource):
   def delete(self):
     pass
 
-
-app = Flask("FB Test")
-api = Api(app)
-api.add_resource(Echo, "/echo/<string:crap>")
-api.add_resource(Move, "/move/<int:x>/<int:y>/<int:z>")
-
 try:
+  app = Flask("FB Test")
+  api = Api(app)
+  api.add_resource(Echo, "/echo/<string:crap>")
+  api.add_resource(Move, "/move/<int:x>/<int:y>/<int:z>")
   app.run(port=8081)
 except Exception as error:
   device.log(repr(error))
