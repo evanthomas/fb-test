@@ -38,5 +38,10 @@ app = Flask("FB Test")
 api = Api(app)
 api.add_resource(Echo, "/echo/<string:crap>")
 api.add_resource(Move, "/move/<int:x>/<int:y>/<int:z>")
-app.run(debug=True,port=8081)
+
+try:
+  app.run(debug=True,port=8081)
+except Exception as error:
+  device.log(repr(error))
+
 
