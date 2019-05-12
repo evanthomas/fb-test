@@ -1,0 +1,12 @@
+{
+ "package": "FB Test",
+ "language": "python",
+ "author": "Mumbler, Inc.",
+ "description": "Probe the FB internal state",
+ "version": "0.0.1",
+ "min_os_version_major": 6,
+ "url": "https://raw.githubusercontent.com/evan-test/fb-test/master/manifest.json",
+ "zip": "https://github.com/evanthomas/fb-test/archive/master.zip",
+ "executable": "python",
+ "args": ["fb-test-master/bot-echo.py"]
+}
