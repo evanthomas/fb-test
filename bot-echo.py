@@ -23,9 +23,9 @@ class Move(Resource):
 
   def post(self, x, y, z):
     try:
-      return device.move_relative(x, y, z, 10)
+      return device.move_relative(x, y, z, 10), 200
     except Exception as ex:
-      return str(ex)
+      return str(ex), 500
 
   def put(self):
     pass
@@ -40,7 +40,7 @@ api.add_resource(Echo, "/echo/<string:crap>")
 api.add_resource(Move, "/move/<int:x>/<int:y>/<int:z>")
 
 try:
-  app.run(debug=True,port=8081)
+  app.run(port=8081)
 except Exception as error:
   device.log(repr(error))
 
